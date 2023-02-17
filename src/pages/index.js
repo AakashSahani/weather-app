@@ -15,8 +15,10 @@ export default function Home() {
 			</Head>
 			<Layout>
 				<Hero />
-				<WeatherWeekly />
-				<WeatherHighlights />
+				<div className="w-full sm:h-screen">
+					<WeatherWeekly />
+					<WeatherHighlights />
+				</div>
 			</Layout>
 		</>
 	);

@@ -7,13 +7,19 @@ import HeavyCloud from '@public/images/HeavyCloud.png';
 import LightCloud from '@public/images/LightCloud.png';
 function WeatherWeekly() {
 	return (
-		<div className="bg-weeklyBg max-h-screen min-h-fit p-10 gap-7 grid grid-cols-2 items-center justify-center w-full">
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-		</div>
+		<>
+			<div className="hidden sm:flex justify-end bg-weeklyBg px-10 items-center pt-2 text-2xl">
+				<button>🌞</button>
+				<button>🌛</button>
+			</div>
+			<div className="bg-weeklyBg max-h-screen sm:max-h-fit min-h-fit p-8 gap-7 grid grid-cols-2 sm:grid-cols-5 items-center justify-center w-full">
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+			</div>
+		</>
 	);
 }
 

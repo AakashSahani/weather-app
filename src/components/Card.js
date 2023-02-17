@@ -7,7 +7,7 @@ import LightCloud from '@public/images/LightCloud.png';
 
 function Card({ children }) {
 	return (
-		<div className="weekly-card">
+		<div className="weekly-card sm:h-36 sm:w-28">
 			<span>Tomorrow</span>
 			<Image src={Shower} alt="Shower" className="p-4" />
 			<span>16C . 11C</span>
