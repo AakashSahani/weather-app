@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.weekly-card {
+		/* <div className="flex flex-col justify-evenly items-center p-5 h-48 w-fit rounded-md shadow-lg bg-mainBg mx-auto"> */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: theme('padding.5');
+		height: theme('height.48');
+		width: theme('width.fit');
+		border-radius: theme('borderRadius.md');
+		box-shadow: theme('boxShadow.lg');
+		background-color: #1e213a;
+		margin: 0 auto;
+	}
+}
