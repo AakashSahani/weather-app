@@ -3,7 +3,10 @@ import Highlights from '../Highlights';
 function WeatherHighlights() {
 	return (
 		<>
-			<div className="bg-weeklyBg max-h-fit sm:min-h-fit min-h-screen sm:p-4  p-10 flex sm:grid sm:grid-cols-2 sm:gap-2 flex-col items-center justify-center w-full">
+			<h1 className="text-white text-center font-bold text-5xl bg-weeklyBg px-[7%] pt-5">
+				HighLights
+			</h1>
+			<div className="bg-weeklyBg max-h-fit sm:max-h-[70vh] h-screen sm:py-10 sm:px-[20%] p-10 sm:grid sm:grid-cols-2 sm:items-start sm:justify-center sm:gap-0 flex flex-col  items-center justify-center w-full">
 				<Highlights />
 				<Highlights />
 				<Highlights />
