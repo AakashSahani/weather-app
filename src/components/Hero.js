@@ -3,7 +3,7 @@ import WeatherToday from './Weather/WeatherToday';
 
 function Hero() {
 	return (
-		<div className="bg-mainBg sm:max-h-screen  min-h-screen sm:w-1/3">
+		<div className="bg-mainBg lg:max-h-screen  min-h-screen lg:w-1/3">
 			<WeatherForm />
 			<WeatherToday />
 		</div>

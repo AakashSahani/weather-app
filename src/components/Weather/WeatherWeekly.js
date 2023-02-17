@@ -8,11 +8,11 @@ import LightCloud from '@public/images/LightCloud.png';
 function WeatherWeekly() {
 	return (
 		<>
-			<div className="hidden sm:flex justify-end h-[5vh] bg-weeklyBg px-10 items-center pt-2 text-2xl">
+			<div className="hidden lg:flex justify-end h-[5vh] bg-weeklyBg px-10 items-center pt-2 text-2xl">
 				<button>🌞</button>
 				<button>🌛</button>
 			</div>
-			<div className="bg-weeklyBg max-h-screen sm:max-h-[30vh] sm:h-[25vh] min-h-fit p-8 gap-7 grid grid-cols-2 sm:grid-cols-5 items-center justify-center w-full">
+			<div className="bg-weeklyBg max-h-screen lg:max-h-[30vh] lg:h-[25vh] min-h-fit p-8 gap-7 grid grid-cols-2 lg:grid-cols-5 items-center justify-center w-full">
 				<Card />
 				<Card />
 				<Card />
