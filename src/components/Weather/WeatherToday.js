@@ -16,11 +16,7 @@ function WeatherToday({ todayWeather }) {
 	const [weather, setWeather] = useState([]);
 	const code = todayWeather && todayWeather.current_weather.weathercode;
 	useEffect(() => {
-		// weatherImg(1);
 		code && weatherImg(0);
-		// console.log(weather[0].weather.src);
-		console.log(todayWeather);
-		console.log(weather);
 	}, [todayWeather]);
 	const weatherImg = () => {
 		(code === 0 || 1) && setWeather((weather) => [{ weather: Clear }]);
