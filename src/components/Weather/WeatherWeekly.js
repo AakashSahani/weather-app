@@ -1,6 +1,5 @@
 import Card from '../Card';
 import { useEffect, useState } from 'react';
-import { get } from 'lodash';
 
 function WeatherWeekly() {
 	const [unit, setUnit] = useState(false);
