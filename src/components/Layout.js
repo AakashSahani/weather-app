@@ -10,9 +10,7 @@ function Layout({ title, keywords, description, children }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			{/* <Header /> */}
-			<main className="flex flex-col lg:flex-row lg:max-h-screen text-white lg:overflow-hidden">
-				{children}
-			</main>
+			<main className="flex flex-col lg:flex-row text-white">{children}</main>
 		</div>
 	);
 }

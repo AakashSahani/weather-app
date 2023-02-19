@@ -3,6 +3,8 @@ import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
 import WeatherWeekly from '@/components/Weather/WeatherWeekly';
 import WeatherHighlights from '@/components/Weather/WeatherHighlights';
+import { getDailyWeather } from '@/utils/getDailyWeather';
+import data from '@/utils/getDailyWeather';
 
 export default function Home() {
 	return (
@@ -15,7 +17,7 @@ export default function Home() {
 			</Head>
 			<Layout>
 				<Hero />
-				<div className="w-full lg:h-screen">
+				<div className="lg:min-h-fit lg:w-2/3">
 					<WeatherWeekly />
 					<WeatherHighlights />
 				</div>

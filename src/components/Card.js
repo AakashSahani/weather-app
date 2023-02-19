@@ -4,7 +4,6 @@ import HeavyRain from '@public/images/HeavyRain.png';
 import LightRain from '@public/images/LightRain.png';
 import HeavyCloud from '@public/images/HeavyCloud.png';
 import LightCloud from '@public/images/LightCloud.png';
-
 function Card({ children }) {
 	return (
 		<div className="weekly-card lg:h-36 lg:w-28">
