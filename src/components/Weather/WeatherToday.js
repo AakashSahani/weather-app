@@ -43,16 +43,16 @@ function WeatherToday({ todayWeather }) {
 	return todayWeather === undefined ? (
 		<div>Waiting on Data</div>
 	) : (
-		<div className="flex flex-col h-fit p-10 gap-10 bg-mainBg items-center justify-around">
+		<div className="flex flex-col h-fit px-10 my-10 gap-20 bg-mainBg items-center justify-around">
 			<Image
 				src={weather.length === 1 ? weather[0].weather : LightCloud}
 				alt="Light Cloud"
 			/>
-			<h1 className="text-5xl my-10 font-bold flex justify-center items-center gap-2">
+			<h1 className="text-6xl my-10 font-bold flex justify-center items-center gap-2">
 				{todayWeather.current_weather.temperature}
-				<span className="text-3xl font-normal">°C</span>
+				<span className="text-4xl font-normal">°C</span>
 			</h1>
-			<span className="text-3xl text-formInputBg font-medium">Shower</span>
+			<span className="text-4xl  text-formInputBg font-medium">Shower</span>
 			<span>Today . {date.toDateString()}</span>
 			<span>🤖 Toronto</span>
 		</div>

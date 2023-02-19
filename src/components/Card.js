@@ -7,7 +7,7 @@ import LightCloud from '@public/images/LightCloud.png';
 function Card({ children, index, weeklyWeather }) {
 	// console.log(weeklyWeather.daily.temperature_2m_min[index]);
 	return (
-		<div className="weekly-card lg:h-36 lg:w-28">
+		<div className="weekly-card lg:h-fit lg:w-fit">
 			<span>{index === 0 ? 'Tomorrow' : weeklyWeather.daily.time[index]}</span>
 			<Image src={Shower} alt="Shower" className="p-4 w-28 lg:w-auto" />
 			<span>
