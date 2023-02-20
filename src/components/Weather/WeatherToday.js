@@ -41,9 +41,9 @@ function WeatherToday({ todayWeather }) {
 		// code === 95 || (96 && setWeather((weather) => [{ weather: Thunderstorm }]));
 	};
 	return todayWeather === undefined ? (
-		<div>Waiting on Data</div>
+		<div className="h-fit lg:h-screen">Waiting on Data</div>
 	) : (
-		<div className="flex flex-col h-fit px-10 my-10 gap-20 bg-mainBg items-center justify-around">
+		<div className="flex flex-col h-fitl px-10 my-10 lg:my-0 gap-20 bg-mainBg items-center justify-around">
 			<Image
 				src={weather.length === 1 ? weather[0].weather : LightCloud}
 				alt="Light Cloud"

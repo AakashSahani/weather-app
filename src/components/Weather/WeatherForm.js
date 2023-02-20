@@ -1,18 +1,8 @@
 import { useEffect, useState } from 'react';
 
-function WeatherForm({ todayWeather, setTodayWeather }) {
+function WeatherForm() {
 	const [text, setText] = useState('');
 	const [search, setSearch] = useState(false);
-
-	useEffect(() => {
-		getTodayWeather();
-	}, []);
-
-	const getTodayWeather = async () => {
-		const res = await fetch('/api/weather');
-		const data = await res.json();
-		setTodayWeather((todayWeather) => data.data);
-	};
 
 	const handleClick = (e) => {
 		setText(e.currentTarget.value);

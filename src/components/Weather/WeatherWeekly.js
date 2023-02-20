@@ -1,25 +1,13 @@
 import Card from '../Card';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { API_URL } from 'config';
 
-function WeatherWeekly() {
+function WeatherWeekly({ weeklyWeather }) {
 	const [unit, setUnit] = useState(false);
-	const [weeklyWeather, setWeeklyWeather] = useState();
 	const [days, setDays] = useState([0, 1, 2, 3, 4]);
 
 	const handleClick = () => {
 		setUnit((unit) => !unit);
-	};
-
-	useEffect(() => {
-		getWeeklyWeather();
-		console.log(weeklyWeather);
-	}, []);
-
-	// getWeeklyWeather();
-	const getWeeklyWeather = async () => {
-		const res = await fetch('/api/weather/weekly');
-		const data = await res.json();
-		setWeeklyWeather((weeklyWeather) => data.data);
 	};
 
 	return (
@@ -34,19 +22,18 @@ function WeatherWeekly() {
 					</button>
 				</div>
 			</div>
-			{weeklyWeather != undefined ? (
+			{weeklyWeather === undefined ? (
+				<div className="text-white bg-mainBg text-center lg:h-1/3">
+					Data is Loading...
+				</div>
+			) : (
 				<div className="bg-weeklyBg min-h-screen lg:max-h-fit lg:min-h-fit p-8 gap-7 grid grid-cols-2 lg:grid-cols-5 items-center justify-center w-full">
 					{days.map((day, index) => (
 						<Card key={index} weeklyWeather={weeklyWeather} index={index} />
 					))}
 				</div>
-			) : (
-				<div className="text-white bg-mainBg text-center">
-					Data is Loading...
-				</div>
 			)}
 		</>
 	);
 }
-
 export default WeatherWeekly;

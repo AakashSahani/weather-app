@@ -1,12 +1,14 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
 import WeatherWeekly from '@/components/Weather/WeatherWeekly';
 import WeatherHighlights from '@/components/Weather/WeatherHighlights';
 import { getDailyWeather } from '@/utils/getDailyWeather';
 import data from '@/utils/getDailyWeather';
+import { API_URL } from 'config';
 
-export default function Home() {
+export default function Home({ todayWeather, weeklyWeather }) {
 	return (
 		<>
 			<Head>
@@ -16,12 +18,22 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Layout>
-				<Hero />
+				<Hero todayWeather={todayWeather} />
 				<div className="lg:min-h-fit lg:w-2/3">
-					<WeatherWeekly />
-					<WeatherHighlights />
+					<WeatherWeekly weeklyWeather={weeklyWeather} />
+					<WeatherHighlights todayWeather={todayWeather} />
 				</div>
 			</Layout>
 		</>
 	);
+}
+
+export async function getServerSideProps() {
+	const res = await fetch(`${API_URL}/api/weather`);
+	const weekly_res = await fetch(`${API_URL}/api/weather/weekly`);
+	const weekly_data = await weekly_res.json();
+	const data = await res.json();
+	return {
+		props: { todayWeather: data.data, weeklyWeather: weekly_data.data },
+	};
 }
